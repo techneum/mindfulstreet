@@ -111,3 +111,22 @@ p {
   height: 30px;
   width: 30px;
 }
+
+.link-arrow {
+  align-items: center;
+  color: var(--color-accent);
+  display: inline-flex;
+  font-size: var(--text-small);
+  justify-content: center;
+  text-decoration: none;
+}
+
+.link-arrow .icon {
+  height: 18px;
+  width: 18px;
+  transition: 0.3s;
+}
+
+.link-arrow:hover .icon {
+  margin-left: 0.3rem;
+}
