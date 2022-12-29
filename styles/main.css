@@ -1,0 +1,60 @@
+:root {
+  --color-primary: #263238;
+  --color-secondary: #587db2;
+  --color-accent: #e0923f;
+  --color-black: #252b42;
+  --color-white: #ffffff;
+  --color-gray: #737373;
+  --border-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Font Sizes:
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44
+  52 / 62 / 74 / 86 / 98 
+
+
+--- 02 COLORS
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+Spacing
+2 4 8 16 32 48 64 80 96 128
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 5.852rem;
+}
+
+h2 {
+  font-size: 4.11rem;
+}
+
+h3 {
+  font-size: 2.887rem;
+}
+
+p {
+  font-size: 1.802rem;
+}
