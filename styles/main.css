@@ -6,6 +6,7 @@
   --color-white: #ffffff;
   --color-gray: #737373;
   --border-radius: 5px;
+  --text-small: 1.25rem;
 }
 
 *,
@@ -68,4 +69,29 @@ p {
   font-size: 1.802rem;
   padding: 0 1rem;
   border-radius: var(--border-radius);
+}
+
+/* Button */
+.btn {
+  border-radius: var(--border-radius);
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: var(--text-small);
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+}
+
+.btn--accent.btn--outline {
+  border: 1px solid var(--color-accent);
+  background: transparent;
+}
+
+.btn--uppercase {
+  text-transform: uppercase;
 }
