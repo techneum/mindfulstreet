@@ -95,3 +95,19 @@ p {
 .btn--uppercase {
   text-transform: uppercase;
 }
+
+/* Icon */
+.icon {
+  height: 24px;
+  width: 24px;
+}
+
+.icon-container {
+  background: var(--color-secondary);
+  display: inline-flex;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+}
