@@ -41,6 +41,7 @@ html {
 body {
   font-family: "Overpass", sans-serif;
   line-height: 1.5;
+  background: var(--color-primary);
 }
 
 h1 {
@@ -57,4 +58,14 @@ h3 {
 
 p {
   font-size: 1.802rem;
+}
+
+/* Logo */
+.logo {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  display: inline-block;
+  font-size: 1.802rem;
+  padding: 0 1rem;
+  border-radius: var(--border-radius);
 }
