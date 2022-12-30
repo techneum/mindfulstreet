@@ -61,6 +61,11 @@ p {
   font-size: 1.802rem;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Logo */
 .logo {
   border: 2px solid var(--color-white);
