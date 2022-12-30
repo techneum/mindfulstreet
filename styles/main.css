@@ -130,3 +130,19 @@ p {
 .link-arrow:hover .icon {
   margin-left: 0.3rem;
 }
+
+/* List */
+.list {
+  font-size: var(--text-small);
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.list__item .icon {
+  margin-right: 0.5rem;
+  color: var(--color-secondary);
+}
