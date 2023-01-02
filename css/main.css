@@ -247,3 +247,34 @@ p {
     text-align: left;
   }
 }
+
+/* Card */
+.card {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  max-width: 500px;
+  gap: 2rem;
+}
+
+.card__title {
+  font-size: 2.4rem;
+}
+
+.card__description {
+  font-size: var(--text-small);
+  margin-bottom: 2rem;
+}
+
+.card__price {
+  font-size: 4rem;
+  display: block;
+}
+
+.card__hour {
+  display: block;
+  margin-top: -1rem;
+  font-size: 1.5rem;
+  font-size: var(--text-small);
+}
