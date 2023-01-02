@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #263238;
+  --color-primary: #0e3255;
   --color-secondary: #587db2;
   --color-accent: #e0923f;
   --color-black: #252b42;
@@ -42,7 +42,7 @@ html {
 body {
   font-family: "Overpass", sans-serif;
   line-height: 1.5;
-  background: var(--color-primary);
+  background: #263238;
 }
 
 h1 {
@@ -64,6 +64,7 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* Logo */
@@ -74,6 +75,7 @@ p {
   font-size: 1.802rem;
   padding: 0 1rem;
   border-radius: var(--border-radius);
+  white-space: nowrap;
 }
 
 /* Button */
@@ -142,12 +144,106 @@ p {
 }
 
 .list__item {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 1rem;
 }
 
 .list__item .icon {
   margin-right: 0.5rem;
   color: var(--color-secondary);
+}
+
+/* Footer */
+.footer {
+  background: #212529;
+  color: var(--color-white);
+  font-size: var(--text-small);
+  padding-top: 4rem;
+}
+
+.footer__brand {
+  text-align: center;
+  grid-column: span 2;
+  order: 2;
+}
+
+.footer .logo {
+  background: var(--color-primary);
+}
+
+.footer__sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer .list__item a {
+  color: var(--color-gray);
+  transition: 0.3s;
+}
+
+.footer .list__item a:hover {
+  color: var(--color-white);
+}
+
+.footer__heading {
+  font-size: 1.424rem;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+}
+
+.footer a .icon {
+  margin-right: 0.5rem;
+  height: 20px;
+  width: 20px;
+}
+
+.footer__bottom {
+  background: #2b2c2d;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.footer__bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  color: var(--color-gray);
+  font-size: var(--text-small);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 0 1rem;
+}
+
+.footer__socials .icon {
+  fill: var(--color-gray);
+  transition: 0.3s;
+}
+
+.footer__socials .icon:hover {
+  fill: var(--color-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .footer__brand {
+    grid-column: span 1;
+    order: -1;
+    text-align: left;
+  }
 }
