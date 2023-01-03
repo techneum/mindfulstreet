@@ -5,6 +5,7 @@
   --color-black: #252b42;
   --color-white: #ffffff;
   --color-gray: #737373;
+  --color-light-gray: #ced4da;
   --border-radius: 5px;
   --text-small: 1.25rem;
 }
@@ -88,10 +89,15 @@ p {
   font-weight: bold;
   padding: 1rem 2.5rem;
   text-decoration: none;
+  display: inline-block;
 }
 
 .btn--accent {
   background: var(--color-accent);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
 }
 
 .btn--accent.btn--outline {
@@ -277,4 +283,80 @@ p {
   margin-top: -1rem;
   font-size: 1.5rem;
   font-size: var(--text-small);
+}
+
+/* Nav */
+.nav {
+  background: var(--color-primary);
+  display: fixed;
+  font-size: var(--text-small);
+  left: 0;
+  padding: 1rem 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.nav.active .nav__list {
+  display: flex;
+}
+
+.nav.active .nav__btn {
+  display: block;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav__toggler {
+  color: white;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: none;
+  flex-direction: column;
+  gap: 4rem;
+  list-style: none;
+  margin-bottom: 4rem;
+  margin-top: 6rem;
+  width: 100%;
+}
+
+.nav__item a {
+  color: var(--color-light-gray);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__item a:hover {
+  color: var(--color-white);
+}
+
+.nav__btn {
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    all: unset;
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+  }
+
+  .nav__btn {
+    display: block;
+    margin: 0;
+  }
 }
