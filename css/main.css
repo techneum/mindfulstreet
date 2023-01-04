@@ -43,7 +43,8 @@ html {
 body {
   font-family: "Overpass", sans-serif;
   line-height: 1.5;
-  background: #263238;
+  /* background: #263238; */
+  background: #fff;
 }
 
 h1 {
@@ -257,6 +258,7 @@ p {
 /* Card */
 .card {
   background: var(--color-white);
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   padding: 4rem;
@@ -359,4 +361,9 @@ p {
     display: block;
     margin: 0;
   }
+}
+
+.card--benefit .icon {
+  height: 72px;
+  width: 72px;
 }
