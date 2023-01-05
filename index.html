@@ -15,40 +15,56 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <div class="feature">
-      <div class="container grid grid--1x2">
-        <svg class="icon feature__icon">
-          <use xlink:href="../assets/sprite.svg#individuals"></use>
+    <nav class="nav">
+      <div class="container">
+        <a href="#" class="nav__brand">
+          <span class="logo">mindful street</span>
+        </a>
+
+        <svg
+          class="icon nav__toggler"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
         </svg>
 
-        <div class="feature__content">
-          <h3 class="feature__title">Individuals</h3>
-          <p class="feature__description">
-            1-on-1 mindfulness training can be helpful for people who want
-            personalized instruction and support in learning mindfulness, or for
-            those who may have difficulty practicing mindfulness in group
-            settings.
-          </p>
-          <a href="#" class="link-arrow"
-            >Learn More
-            <svg
-              class="link-arrow__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </a>
-        </div>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">Workshops</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+        </ul>
+
+        <a href="#" class="btn btn--secondary nav__btn">Contact US</a>
       </div>
-    </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container grid grid--1x2">
+        <div class="hero__content">
+          <h1 class="hero__heading">Positive well-being through mindfulness</h1>
+          <p class="hero__tagline">
+            Learn effective mindfulness techniques to become <br />calmer,
+            happier, and more focused in daily life.
+          </p>
+          <div class="hero__buttons">
+            <button class="btn btn--accent">Get Started</button>
+            <button class="btn btn--accent btn--outline">Learn More</button>
+          </div>
+        </div>
+        <svg class="hero__image">
+          <use xlink:href="../assets/sprite.svg#hero"></use>
+        </svg>
+      </div>
+    </section>
   </body>
 </html>
