@@ -77,6 +77,11 @@ p {
   gap: 2rem;
 }
 
+/* Section */
+section {
+  padding: 8rem 0;
+}
+
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
@@ -120,6 +125,11 @@ p {
 
 .btn--accent.btn--outline {
   border: 1px solid var(--color-accent);
+  background: transparent;
+}
+
+.btn--secondary.btn--outline {
+  border: 1px solid var(--color-secondary);
   background: transparent;
 }
 
@@ -180,8 +190,8 @@ p {
 
 /* Heading */
 .heading {
+  margin-bottom: 4rem;
 }
-
 .heading__subtitle {
   color: var(--color-accent);
   font-size: var(--text-small);
@@ -438,12 +448,13 @@ p {
 .hero {
   background: var(--color-primary);
   color: var(--color-white);
-  padding: 15vh 0;
+  padding: 20vh 0;
   margin: 2rem 0;
 }
 
 .hero__content {
   text-align: center;
+  height: 100%;
 }
 
 .hero__heading {
@@ -467,10 +478,14 @@ p {
 
 @media screen and (min-width: 768px) {
   .hero {
-    height: 90vh;
+    /* height: 90vh; */
   }
   .hero__content {
     text-align: left;
+  }
+
+  .hero__tagline {
+    width: 45rem;
   }
 
   .hero__buttons {
@@ -480,6 +495,48 @@ p {
   .hero__image {
     display: block;
     width: 100%;
-    height: 40rem;
+    height: 150%;
+    resize: both;
+  }
+
+  .hero__image svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Benefits */
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefits .icon {
+  height: 72px;
+  width: 72px;
+}
+
+.benefits .card__title {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.benefits .card__title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50px;
+  margin-top: 2rem;
+  background: var(--color-accent);
+}
+
+.benefits .card__description {
+  color: var(--color-gray);
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits__cards {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
