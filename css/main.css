@@ -178,6 +178,21 @@ p {
   color: var(--color-secondary);
 }
 
+/* Heading */
+.heading {
+}
+
+.heading__subtitle {
+  color: var(--color-accent);
+  font-size: var(--text-small);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.heading__description {
+  color: var(--color-gray);
+}
+
 /* Footer */
 .footer {
   background: #212529;
