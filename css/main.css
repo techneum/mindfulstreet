@@ -315,7 +315,7 @@ section {
   box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  padding: 2rem;
   max-width: 500px;
   gap: 2rem;
 }
@@ -326,16 +326,19 @@ section {
 
 .card__description {
   font-size: var(--text-small);
-  /* margin-bottom: 2rem; */
+  color: var(--color-gray);
 }
 
 .card__price {
   font-size: 4rem;
+  color: var(--color-secondary);
   display: block;
+  font-weight: bold;
 }
 
 .card__hour {
   display: block;
+  color: var(--color-gray);
   margin-top: -1rem;
   font-size: 1.5rem;
   font-size: var(--text-small);
@@ -352,6 +355,7 @@ section {
   top: 0;
   width: 100%;
   position: fixed;
+  z-index: 99;
 }
 
 .nav.active .nav__list {
@@ -476,6 +480,7 @@ section {
 
 .hero__tagline {
   margin-bottom: 2rem;
+  color: var(--color-light-gray);
 }
 
 .hero__buttons {
@@ -555,12 +560,80 @@ section {
 }
 
 /* Features */
-.feature {
-  margin-bottom: 4rem;
+.features {
+  padding-top: 0;
+}
+
+.feature__icon {
+  transform: translateY(10%);
+}
+
+.feature:nth-child(3) .feature__icon {
+  transform: translateY(15%);
 }
 
 @media screen and (min-width: 768px) {
   .feature:nth-child(even) .feature__content {
     order: -1;
+  }
+
+  .feature:nth-child(1) .feature__icon {
+    transform: translateY(0);
+  }
+
+  .feature:nth-child(2) .feature__icon {
+    transform: translateY(0);
+    height: 400px;
+  }
+
+  .feature:nth-child(3) .feature__icon {
+    transform: translateY(0);
+    height: 50rem;
+  }
+}
+
+/* Pricing */
+.pricing {
+  background: var(--color-primary);
+}
+
+.pricing .heading__title {
+  color: white;
+}
+
+.heading__description {
+  color: var(--color-light-gray);
+}
+
+.pricing__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  justify-items: center;
+}
+
+.pricing .card__description {
+  transform: translateY(-100%);
+}
+
+.pricing .card__price {
+  transform: translateY(-10%);
+}
+
+.pricing .btn {
+  margin-bottom: 2rem;
+}
+
+.pricing .list {
+  color: var(--color-gray);
+}
+
+.pricing .list__item {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .pricing__cards {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
