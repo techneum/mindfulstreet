@@ -612,12 +612,16 @@ section {
   justify-items: center;
 }
 
+.pricing .card {
+  padding: 4rem;
+}
+
 .pricing .card__description {
-  transform: translateY(-100%);
+  margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 
 .pricing .card__price {
-  transform: translateY(-10%);
 }
 
 .pricing .btn {
