@@ -7,7 +7,7 @@
   --color-gray: #737373;
   --color-light-gray: #ced4da;
   --border-radius: 5px;
-  --text-small: 1.25rem;
+  --text-small: 1.5rem;
 }
 
 *,
@@ -108,15 +108,22 @@ section {
   border: 0;
   color: var(--color-white);
   cursor: pointer;
+  display: block;
   font-size: var(--text-small);
   font-weight: bold;
-  padding: 1rem 2.5rem;
+  letter-spacing: 2px;
+  padding: 1.2rem 2.5rem;
   text-decoration: none;
-  display: inline-block;
+  transition: 0.3s;
+  line-height: 1;
 }
 
 .btn--accent {
   background: var(--color-accent);
+}
+
+.btn--accent:hover {
+  background: #ad6921;
 }
 
 .btn--secondary {
@@ -131,6 +138,11 @@ section {
 .btn--secondary.btn--outline {
   border: 1px solid var(--color-secondary);
   background: transparent;
+}
+
+.btn--secondary.btn--outline:hover {
+  border: 1px solid var(--color-secondary);
+  background: var(--color-secondary);
 }
 
 .btn--uppercase {
@@ -510,6 +522,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
 .benefits .icon {
@@ -538,5 +551,16 @@ section {
 @media screen and (min-width: 1200px) {
   .benefits__cards {
     grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Features */
+.feature {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-child(even) .feature__content {
+    order: -1;
   }
 }
