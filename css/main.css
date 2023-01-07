@@ -314,7 +314,7 @@ section {
 
 .card__description {
   font-size: var(--text-small);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .card__price {
