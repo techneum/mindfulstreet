@@ -629,6 +629,8 @@ section {
 }
 
 .pricing .list__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
   margin-bottom: 2rem;
 }
 
