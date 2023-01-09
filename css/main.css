@@ -498,9 +498,6 @@ section {
 }
 
 @media screen and (min-width: 768px) {
-  .hero {
-    /* height: 90vh; */
-  }
   .hero__content {
     text-align: left;
   }
@@ -577,31 +574,50 @@ section {
   padding-top: 0;
 }
 
+.feature:nth-child(1) {
+  margin-bottom: 6rem;
+}
+
 .feature__icon {
-  transform: translateY(10%);
+  height: 20rem;
+}
+
+.feature:nth-child(1) .feature__icon {
+  height: 25rem;
+  transform: translateY(5%);
 }
 
 .feature:nth-child(3) .feature__icon {
-  transform: translateY(15%);
+  height: 30rem;
+  transform: translateY(17%);
 }
 
 @media screen and (min-width: 768px) {
+  .feature:nth-child(1) {
+    margin-bottom: 8rem;
+  }
+
+  .feature:nth-child(2) {
+    margin-bottom: 8rem;
+  }
+
   .feature:nth-child(even) .feature__content {
     order: -1;
   }
 
   .feature:nth-child(1) .feature__icon {
     transform: translateY(0);
+    height: 40rem;
   }
 
   .feature:nth-child(2) .feature__icon {
     transform: translateY(0);
-    height: 400px;
+    height: 30rem;
   }
 
   .feature:nth-child(3) .feature__icon {
     transform: translateY(0);
-    height: 50rem;
+    height: 45rem;
   }
 }
 
@@ -632,9 +648,6 @@ section {
 .pricing .card__description {
   margin-top: -2rem;
   margin-bottom: 2rem;
-}
-
-.pricing .card__price {
 }
 
 .pricing .btn {
