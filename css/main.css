@@ -727,3 +727,27 @@ section {
     flex-direction: row;
   }
 }
+
+/* Partners */
+.partners {
+  background: var(--color-light-gray);
+}
+
+.partners .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8rem;
+}
+
+.partners__logo {
+  height: 5rem;
+  filter: grayscale(100);
+}
+
+@media screen and (min-width: 768px) {
+  .partners .container {
+    flex-direction: row;
+  }
+}
