@@ -744,6 +744,11 @@ section {
 .partners__logo {
   height: 5rem;
   filter: grayscale(100);
+  transition: 0.3s;
+}
+
+.partners__logo:hover {
+  filter: grayscale(50%);
 }
 
 @media screen and (min-width: 768px) {
