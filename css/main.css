@@ -231,6 +231,7 @@ section {
   text-align: center;
   grid-column: span 2;
   order: 2;
+  padding: 0;
 }
 
 .footer .logo {
@@ -240,7 +241,11 @@ section {
 .footer__sections {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 4rem;
+}
+
+.footer__section {
+  padding: 0;
 }
 
 .footer .list__item a {
