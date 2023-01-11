@@ -43,7 +43,6 @@ html {
 body {
   font-family: "Overpass", sans-serif;
   line-height: 1.5;
-  /* background: #263238; */
   background: #fff;
 }
 
@@ -784,5 +783,132 @@ section {
   .cta .heading {
     width: 50%;
     margin: 2rem auto;
+  }
+}
+
+/* About Us */
+.about-us__intro {
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.about-us__heading {
+  font-size: 4.11rem;
+}
+
+.about-us__description {
+  color: var(--color-gray);
+}
+
+.about-us__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+.about-us__circle-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circles {
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  transition: 0.3s;
+  border: 3px solid #cdd8e8;
+  font-weight: bold;
+  color: #212529;
+}
+
+.circle-why {
+  background: var(--color-white);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-why:hover {
+  background: #e0923f;
+  color: var(--color-white);
+}
+
+.circle-how {
+  background: var(--color-white);
+  height: 20rem;
+  width: 20rem;
+  border-radius: 100%;
+}
+
+.circle-how:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.circle-how span {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle-what {
+  background: var(--color-white);
+  height: 30rem;
+  width: 30rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-what:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.circle-what span {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-us__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: #495057;
+}
+
+.about-us__text h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .circles {
+    display: flex;
+  }
+
+  .about-us__text h2,
+  .about-us__text p {
+    transition: 0.3s;
   }
 }
