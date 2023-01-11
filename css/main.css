@@ -761,3 +761,28 @@ section {
     flex-direction: row;
   }
 }
+
+/* CTA */
+.cta {
+  text-align: center;
+}
+
+.cta .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta .heading__subtitle {
+  color: var(--color-secondary);
+}
+
+.cta .btn {
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .cta .heading {
+    width: 50%;
+    margin: 2rem auto;
+  }
+}
