@@ -6,29 +6,70 @@ navToggler.addEventListener("click", (e) => {
   nav.classList.toggle("active");
 });
 
-// Circles
-const circles = document.querySelectorAll(".circle");
+// About Us
+const colors = {
+  primary: "#0e3255",
+  secondary: "#587db2",
+  accent: "#e0923f",
+  black: "#252b42",
+  gray: "#737373",
+  white: "#fff",
+};
 
-circles.forEach((circle) => {
-  circle.addEventListener("mouseover", () => {
-    const id = circle.dataset.target;
-    const target = document.querySelector(id);
-    const color = circle.dataset.color;
-    changeColor(target, color);
-  });
+// Listen to text hover
+const textParent = document.querySelector(".about-us__text");
+textParent.addEventListener("mouseover", (e) => {
+  const text = e.target.closest(".about-us__text p");
+  if (!text) return;
+  const id = text.dataset.target;
+  const target = document.querySelector(id);
+  const color = text.dataset.color;
 
-  circle.addEventListener("mouseout", () => {
-    removeColor();
+  // Change Text Color
+  text.style.color = colors[color];
+
+  // Change Circle Color
+  changeCircleColor(target, colors[color]);
+
+  // Remove Color Listener
+  text.addEventListener("mouseout", () => {
+    removeColor(target);
+    removeColor(text);
   });
 });
 
-function changeColor(target, color) {
+// Listen to circle cover
+const circles = document.querySelector(".circles");
+circles.addEventListener("mouseover", (e) => {
+  const circle = e.target.closest(".circle");
+  if (!circle) return;
+  const color = circle.dataset.color;
+  const id = circle.id;
+  const text = document.querySelector(`p[data-target="#${id}"]`);
+
+  // Change Circle Color
+  changeCircleColor(circle, colors[color]);
+
+  // Change Text Color
+  changeTextColor(text, colors[color]);
+
+  // Remove Circle Color
+  circle.addEventListener("mouseout", () => {
+    removeColor(circle);
+    removeColor(text);
+  });
+});
+
+function changeCircleColor(target, color) {
+  target.style.background = color;
+  target.style.color = colors["white"];
+}
+
+function changeTextColor(target, color) {
   target.style.color = color;
 }
 
-function removeColor() {
-  const texts = document.querySelectorAll(".about-us__text > *");
-  texts.forEach((text) => {
-    text.style.color = "#495057";
-  });
+function removeColor(target) {
+  target.style.background = colors["white"];
+  target.style.color = colors["gray"];
 }
