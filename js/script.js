@@ -18,8 +18,12 @@ navButtons.forEach((button) => {
     // Get destination section
     const destination = document.querySelector(hash);
     destination.scrollIntoView({ behavior: "smooth" });
+
+    // Close nav
+    nav.classList.toggle("active");
   });
 });
+
 // ABOUT US ***************
 const colors = {
   primary: "#0e3255",
