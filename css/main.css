@@ -64,7 +64,7 @@ p {
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -449,6 +449,7 @@ section {
 
 .feature__title {
   margin-bottom: 2rem;
+  color: var(--color-black);
 }
 
 .feature__title::before {
@@ -552,6 +553,7 @@ section {
 .benefits .card__title {
   font-size: 1.6rem;
   font-weight: 900;
+  color: var(--color-black);
 }
 
 .benefits .card__title::after {
@@ -748,12 +750,12 @@ section {
 
 .partners__logo {
   height: 5rem;
-  filter: grayscale(100);
+  filter: grayscale(100%);
   transition: 0.3s;
 }
 
 .partners__logo:hover {
-  filter: grayscale(50%);
+  filter: grayscale(100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -907,5 +909,89 @@ section {
 
   .about-us__text p {
     transition: 0.3s;
+  }
+}
+
+/* Contact Us */
+.contact-us .container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.contact-us .grid {
+  align-items: start;
+  gap: 6rem;
+}
+
+.contact-us__heading {
+  color: var(--color-black);
+  margin-bottom: 4rem;
+}
+
+.contact-us__description {
+  margin-bottom: 6rem;
+  color: var(--color-gray);
+}
+
+.contact-us__contacts {
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-us a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.802rem;
+  display: flex;
+}
+
+.contact-us .icon {
+  color: var(--color-secondary);
+  margin-right: 0.5rem;
+}
+
+.contact-us__facebook .icon {
+  fill: var(--color-secondary);
+}
+
+.contact-us__form {
+  height: 100%;
+}
+
+/* Form */
+.form {
+  font-size: var(--text-small);
+}
+
+.form label {
+  color: var(--color-gray);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input {
+  padding: 1rem;
+  border: 1px solid var(--color-light-gray);
+  outline: 0;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+}
+
+.form textarea {
+  border: 1px solid var(--color-light-gray);
+  margin-bottom: 2rem;
+  outline: 0;
+  font-family: inherit;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-us__heading {
+    text-align: center;
   }
 }
