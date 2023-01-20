@@ -7,10 +7,11 @@ navToggler.addEventListener("click", (e) => {
 });
 
 // SMOOTH SCROLL ***************
-// Listen to nav buttons
 const navButtons = document.querySelectorAll(".nav__button");
+const learnMoreButton = document.querySelector("#learn-more");
+const buttons = [...navButtons, learnMoreButton];
 
-navButtons.forEach((button) => {
+buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     const hash = button.hash;
@@ -20,7 +21,7 @@ navButtons.forEach((button) => {
     destination.scrollIntoView({ behavior: "smooth" });
 
     // Close nav
-    nav.classList.toggle("active");
+    nav.classList.remove("active");
   });
 });
 

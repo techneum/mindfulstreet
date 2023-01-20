@@ -755,7 +755,7 @@ section {
 }
 
 .partners__logo:hover {
-  filter: grayscale(100%);
+  filter: grayscale(50%);
 }
 
 @media screen and (min-width: 768px) {
