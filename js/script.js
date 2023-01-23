@@ -9,20 +9,23 @@ navToggler.addEventListener("click", (e) => {
 // SMOOTH SCROLL ***************
 const navButtons = document.querySelectorAll(".nav__button");
 const learnMoreButton = document.querySelector("#learn-more");
+
 const buttons = [...navButtons, learnMoreButton];
 
 buttons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    const hash = button.hash;
+  if (button) {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const hash = button.hash;
 
-    // Get destination section
-    const destination = document.querySelector(hash);
-    destination.scrollIntoView({ behavior: "smooth" });
+      // Get destination section
+      const destination = document.querySelector(hash);
+      destination.scrollIntoView({ behavior: "smooth" });
 
-    // Close nav
-    nav.classList.remove("active");
-  });
+      // Close nav
+      nav.classList.remove("active");
+    });
+  }
 });
 
 // ABOUT US ***************
