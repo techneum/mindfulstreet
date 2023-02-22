@@ -7,11 +7,37 @@ navToggler.addEventListener("click", (e) => {
 });
 
 // SMOOTH SCROLL ***************
-const navButtons = document.querySelectorAll(".nav__button");
-const learnMoreButton = document.querySelector("#learn-more");
-const buttons = [...navButtons, learnMoreButton];
+// const navButtons = document.querySelectorAll(".nav__button");
+// const learnMoreButton = document.querySelector("#learn-more");
+// const buttons = [...navButtons, learnMoreButton];
 
-buttons.forEach((button) => {
+// buttons.forEach((button) => {
+//   button.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     const hash = button.hash;
+
+//     // Get destination section
+//     const destination = document.querySelector(hash);
+//     destination.scrollIntoView({ behavior: "smooth" });
+
+//     // Close nav
+//     nav.classList.remove("active");
+//   });
+// });
+
+const learnMoreButton = document.querySelector("#learn-more");
+if (learnMoreButton) {
+  learnMoreButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const hash = learnMoreButton.hash;
+    const target = document.querySelector(hash);
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+const navButtons = document.querySelectorAll(".nav__button");
+
+navButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     const hash = button.hash;
